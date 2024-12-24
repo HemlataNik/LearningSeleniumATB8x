@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class Lab002_AwQA_practice {
 
     public static void main(String args[]) throws Exception {
@@ -43,10 +45,17 @@ public class Lab002_AwQA_practice {
         WebElement select = driver.findElement(By.xpath("//option[contains(text(),'Australia')]"));
         select.click();
 
+       WebElement cmd = driver.findElement(By.id("selenium_commands"));
+        Select S = new Select(cmd);
+        List<WebElement> option =S.getOptions();
+        for( WebElement name: option) {
+            System.out.println(name.getText());
+        }
+
         WebElement btn = driver.findElement(By.id("submit"));
         System.out.println(btn.isEnabled());
         System.out.println(btn.getText());
 
-        driver.quit();
+       //driver.quit();
         }
 }

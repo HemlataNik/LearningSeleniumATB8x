@@ -32,6 +32,6 @@ public class Lab001_com_Basics {
         login_btn.click();
         Thread.sleep(2000);
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/#appointment");
-        driver.quit();
+        //driver.quit();
     }
 }
