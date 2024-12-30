@@ -1,4 +1,4 @@
-package com.thetestingacademy.Ex_23122024;
+package com.thetestingacademy.Ex03_23122024;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -48,7 +48,8 @@ public class Lab002_AwQA_practice {
        WebElement cmd = driver.findElement(By.id("selenium_commands"));
         Select S = new Select(cmd);
         List<WebElement> option =S.getOptions();
-        for( WebElement name: option) {
+        for( WebElement name: option)
+        {
             System.out.println(name.getText());
         }
 

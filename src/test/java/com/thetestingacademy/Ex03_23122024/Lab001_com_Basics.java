@@ -1,4 +1,4 @@
-package com.thetestingacademy.Ex_23122024;
+package com.thetestingacademy.Ex03_23122024;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
