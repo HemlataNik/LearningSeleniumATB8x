@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class Lab001 {
     public static void main(String[] args) throws InterruptedException {
@@ -20,10 +21,14 @@ public class Lab001 {
 
         WebElement sign_in = driver.findElement(By.id("frm-btn"));
         sign_in.click();
-        Thread.sleep(6000);
+        Thread.sleep(10000);
 
-        WebElement trial_msg = driver.findElement(By.id("expiredmsg"));
-        trial_msg.isDisplayed();
+        WebElement freeTrialMessage = driver.findElement(By.xpath("//h5[@class='id-card-title']"));
+        System.out.println("Free Trial Message = "+freeTrialMessage.getText());
+        Assert.assertEquals(freeTrialMessage.getText(), "Your free trial has expired");
+
+
+
 
     }
 }
