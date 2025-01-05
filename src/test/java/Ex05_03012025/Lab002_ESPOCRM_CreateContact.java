@@ -48,5 +48,22 @@ public class Lab002_ESPOCRM_CreateContact {
 
         WebElement saveButton= driver.findElement(By.xpath("//button[@data-action='save']"));
         saveButton.click();
+        WebElement Created = driver.findElement(By.xpath("//label[@data-name=\"name\"]/following::div[1]"));
+        System.out.println("Contact Created Successfully!!" + Created.getText());
+
+        Thread.sleep(4000);
+        Actions action2 = new Actions(driver);
+        action2.moveToElement(driver.findElement(By.xpath("(//span[@class=\"fas fa-ellipsis-h\"])[2]"))).click().perform();
+        action2.moveToElement(driver.findElement(By.xpath("//a[@data-action=\"delete\"]"))).click().perform();
+
+        Thread.sleep(5000);
+
+        WebElement confirm_msg = driver.findElement(By.xpath("//span[@class=\"confirm-message\"]"));
+        System.out.println(confirm_msg.getText());
+
+        WebElement remove = driver.findElement(By.xpath("//div[@class=\"btn-group additional-btn-group\"]"));
+        remove.click();
+        System.out.println("Created Contact is removed");
+
     }
 }
