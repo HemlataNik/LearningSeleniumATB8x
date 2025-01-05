@@ -4,19 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.openqa.selenium.Alert;
-
-import java.sql.Driver;
-import java.sql.DriverAction;
 import java.time.Duration;
-
-import static java.lang.Thread.*;
 
 public class Lab001_ESPOCRM_CreateAcc {
 
@@ -64,7 +56,7 @@ public class Lab001_ESPOCRM_CreateAcc {
 
             WebElement remove = driver.findElement(By.xpath("//div[@class=\"btn-group additional-btn-group\"]"));
             remove.click();
-            System.out.println("Created Account removed from Account List");
+            System.out.println("Created Account is removed from Account List");
 
         }
     }
