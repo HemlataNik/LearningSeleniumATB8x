@@ -63,7 +63,7 @@ public class Lab002_ESPOCRM_CreateContact {
 
         WebElement remove = driver.findElement(By.xpath("//div[@class=\"btn-group additional-btn-group\"]"));
         remove.click();
-        System.out.println("Created Contact is removed");
+        System.out.println("Contact Created is removed");
 
     }
 }
