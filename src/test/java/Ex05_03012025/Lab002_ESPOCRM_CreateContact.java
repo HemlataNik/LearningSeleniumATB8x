@@ -15,7 +15,7 @@ import java.time.Duration;
 
 public class Lab002_ESPOCRM_CreateContact {
     @Test
-    public void CreateAccount_test() throws InterruptedException {
+    public void CreateContact_test() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("https://demo.us.espocrm.com/?l=en_US#Contact");
         driver.manage().window().maximize();
