@@ -26,13 +26,13 @@ public class Lab002_ESPOCRM_CreateContact {
         System.out.println(driver.getTitle());
         Thread.sleep(8000);
 
-        WebElement login_btn = driver.findElement(By.id("btn-login"));
-        login_btn.click();
+        WebElement login = driver.findElement(By.id("btn-login"));
+        login.click();
         Thread.sleep(4000);
 
-        WebElement creat_Cont = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class=\"header-buttons btn-group pull-right\"]")));
-        System.out.println(creat_Cont.getText());
-        creat_Cont.click();
+        WebElement creatCont = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class=\"header-buttons btn-group pull-right\"]")));
+        System.out.println(creatCont.getText());
+        creatCont.click();
         Thread.sleep(6000);
 
         Thread.sleep(8000);
@@ -46,8 +46,8 @@ public class Lab002_ESPOCRM_CreateContact {
         lastname.sendKeys("Nikam");
         Thread.sleep(9000);
 
-        WebElement saveButton= driver.findElement(By.xpath("//button[@data-action='save']"));
-        saveButton.click();
+        WebElement save= driver.findElement(By.xpath("//button[@data-action='save']"));
+        save.click();
         WebElement Created = driver.findElement(By.xpath("//label[@data-name=\"name\"]/following::div[1]"));
         System.out.println("Contact Created Successfully!!" + Created.getText());
 
@@ -58,11 +58,11 @@ public class Lab002_ESPOCRM_CreateContact {
 
         Thread.sleep(5000);
 
-        WebElement confirm_msg = driver.findElement(By.xpath("//span[@class=\"confirm-message\"]"));
-        System.out.println(confirm_msg.getText());
+        WebElement confirm = driver.findElement(By.xpath("//span[@class=\"confirm-message\"]"));
+        System.out.println(confirm.getText());
 
-        WebElement remove = driver.findElement(By.xpath("//div[@class=\"btn-group additional-btn-group\"]"));
-        remove.click();
+        WebElement RemoveCont = driver.findElement(By.xpath("//div[@class=\"btn-group additional-btn-group\"]"));
+        RemoveCont.click();
         System.out.println("Contact Created is removed");
 
     }

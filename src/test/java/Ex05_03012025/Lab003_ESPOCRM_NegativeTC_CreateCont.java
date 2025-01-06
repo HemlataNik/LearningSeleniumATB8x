@@ -24,19 +24,19 @@ public class Lab003_ESPOCRM_NegativeTC_CreateCont {
         System.out.println(driver.getTitle());
         Thread.sleep(8000);
 
-        WebElement login_btn = driver.findElement(By.id("btn-login"));
-        login_btn.click();
+        WebElement login = driver.findElement(By.id("btn-login"));
+        login.click();
         Thread.sleep(4000);
 
-        WebElement creat_Cont = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class=\"header-buttons btn-group pull-right\"]")));
-        System.out.println(creat_Cont.getText());
-        creat_Cont.click();
+        WebElement creatCont = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class=\"header-buttons btn-group pull-right\"]")));
+        System.out.println(creatCont.getText());
+        creatCont.click();
         Thread.sleep(8000);
 
         // try to save without entering anything - it should give you error, verify that.
 
-        WebElement saveButton= driver.findElement(By.xpath("//button[@data-action='save']"));
-        saveButton.click();
+        WebElement save= driver.findElement(By.xpath("//button[@data-action='save']"));
+        save.click();
         Thread.sleep(2000);
 
         //freezing screen for to inspect error msg

@@ -24,38 +24,38 @@ public class Lab001_ESPOCRM_CreateAcc {
             System.out.println(driver.getTitle());
             Thread.sleep(8000);
 
-            WebElement login_btn = driver.findElement(By.id("btn-login"));
-            login_btn.click();
+            WebElement login = driver.findElement(By.id("btn-login"));
+            login.click();
             Thread.sleep(4000);
 
-            WebElement creat_Acc = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class=\"fas fa-plus fa-sm\" ]/following-sibling::span")));
-            System.out.println(creat_Acc.getText());
-            creat_Acc.click();
+            WebElement creatAcc = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class=\"fas fa-plus fa-sm\" ]/following-sibling::span")));
+            System.out.println(creatAcc.getText());
+            creatAcc.click();
             Thread.sleep(4000);
 
-            WebElement NameText = driver.findElement(By.xpath("//input[@data-name='name']"));
-            NameText.sendKeys("HEMLATA");
+            WebElement Name = driver.findElement(By.xpath("//input[@data-name='name']"));
+            Name.sendKeys("HEMLATA");
 
-            WebElement SaveButton = driver.findElement(By.xpath("//button[@data-action='save']"));
-            SaveButton.click();
+            WebElement Save = driver.findElement(By.xpath("//button[@data-action='save']"));
+            Save.click();
             Thread.sleep(3000);
 
-            WebElement Acc_Created = driver.findElement(By.xpath("//label[@data-name=\"name\"]/following::div[1]"));
-            System.out.println("Account Created Successfully!!" + Acc_Created.getText());
+            WebElement accCreated = driver.findElement(By.xpath("//label[@data-name=\"name\"]/following::div[1]"));
+            System.out.println("Account Created Successfully!!" + accCreated.getText());
 
 
-            WebElement Sel_EditDropdown = driver.findElement(By.xpath("(//span[@class=\"fas fa-ellipsis-h\"])[2]"));
-            Sel_EditDropdown.click();
+            WebElement Edit = driver.findElement(By.xpath("(//span[@class=\"fas fa-ellipsis-h\"])[2]"));
+            Edit.click();
 
-            WebElement Remove_name = driver.findElement(By.xpath("//a[@data-action=\"delete\"]"));
-            Remove_name.click();
+            WebElement Remove = driver.findElement(By.xpath("//a[@data-action=\"delete\"]"));
+            Remove.click();
             Thread.sleep(5000);
 
-            WebElement confirm_msg = driver.findElement(By.xpath("//span[@class=\"confirm-message\"]"));
-            System.out.println(confirm_msg.getText());
+            WebElement confirm = driver.findElement(By.xpath("//span[@class=\"confirm-message\"]"));
+            System.out.println(confirm.getText());
 
-            WebElement remove = driver.findElement(By.xpath("//div[@class=\"btn-group additional-btn-group\"]"));
-            remove.click();
+            WebElement RemoveAcc = driver.findElement(By.xpath("//div[@class=\"btn-group additional-btn-group\"]"));
+            RemoveAcc.click();
             System.out.println("Created Account is removed from Account List");
 
         }
