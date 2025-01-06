@@ -1,4 +1,4 @@
-package Ex05_03012025;
+package com.thetestingacademy.Ex05_03012025;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
