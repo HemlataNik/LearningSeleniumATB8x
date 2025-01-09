@@ -1,4 +1,4 @@
-package com.thetestingacademy.Ex07_07012025;
+package com.thetestingacademy.Ex07_07012025_ActionClass;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
