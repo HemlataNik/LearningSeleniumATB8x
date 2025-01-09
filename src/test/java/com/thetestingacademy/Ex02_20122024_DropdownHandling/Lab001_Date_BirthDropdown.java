@@ -1,13 +1,11 @@
-package com.thetestingacademy.Ex06_06012025;
-
+package com.thetestingacademy.Ex02_20122024_DropdownHandling;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import java.util.Set;
-
-public class Lab007_DoBdropdown {
+public class Lab001_Date_BirthDropdown {
     @Test
     public void DoBdropdown_Test() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
@@ -34,4 +32,5 @@ public class Lab007_DoBdropdown {
         day.click();
 
     }
+
 }

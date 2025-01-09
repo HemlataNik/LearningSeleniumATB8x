@@ -1,6 +1,5 @@
-package com.thetestingacademy.Ex06_06012025;
+package com.thetestingacademy.Ex08_09012025_WindowHandling;
 
-import net.bytebuddy.dynamic.loading.ByteArrayClassLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.Set;
 
-public class Lab006_WindowHandling {
+public class Lab001_WindowHandling {
     @Test
     public void WindowHandle_Test() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
@@ -40,8 +39,6 @@ public class Lab006_WindowHandling {
         //driver.switchTo().window(mainWindow);
 
         //driver.quit();
-
-
 
     }
 }

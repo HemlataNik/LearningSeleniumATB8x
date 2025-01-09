@@ -1,4 +1,4 @@
-package com.thetestingacademy.Ex06_06012025;
+package com.thetestingacademy.Ex02_20122024_DropdownHandling;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class Lab001_Dropdown {
+public class Lab002_Dropdown {
 
     @Test
     public void DropdownTest () throws InterruptedException {

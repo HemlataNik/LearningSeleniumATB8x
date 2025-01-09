@@ -1,13 +1,11 @@
-package com.thetestingacademy.Ex02_20122024;
+package com.thetestingacademy.Ex02_20122024_DropdownHandling;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.*;
-public class Lab002 {
+public class Lab003_CURAHealthcare {
     // Open the https://katalon-demo-cura.herokuapp.com/
     // Verify the title and search a string in pageSource
     // Add assertion that the Cura heatlh care Service is visible in the page source.

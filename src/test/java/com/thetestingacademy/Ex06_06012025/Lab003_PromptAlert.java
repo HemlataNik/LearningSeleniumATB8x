@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class Lab003_ConfirmationAlert {
+public class Lab003_PromptAlert {
 
 
     @Test
@@ -18,17 +18,16 @@ public class Lab003_ConfirmationAlert {
         driver.manage().window().maximize();
 
         Thread.sleep(2000);
-        WebElement button = driver.findElement(By.xpath("//button[@onclick=\"jsConfirm()\"]"));
+        WebElement button = driver.findElement(By.xpath("//button[@onclick=\"jsPrompt()\"]"));
         button.click();
         Thread.sleep(2000);
 
-        Alert Confirm_alert = driver.switchTo().alert();
-        Confirm_alert.accept();
+        Alert Prompt_alert = driver.switchTo().alert();
+        Prompt_alert.sendKeys("I am a JS prompt Alert");
+        Prompt_alert.accept();
         Thread.sleep(4000);
 
         String result= driver.findElement(By.id("result")).getText();
         System.out.println(result);
     }
 }
-
-

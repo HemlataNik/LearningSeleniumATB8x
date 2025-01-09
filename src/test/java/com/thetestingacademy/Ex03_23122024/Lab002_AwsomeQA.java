@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class Lab002_AwQA_practice {
+public class Lab002_AwsomeQA {
 
     public static void main(String args[]) throws Exception {
 

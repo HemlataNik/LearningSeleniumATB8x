@@ -5,10 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class Lab002_Alert {
+public class Lab001_Alert {
 
     @Test
     public void Alert_Test() throws InterruptedException {

@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import java.util.List;
-public class Lab002 {
+public class Lab002_EbayWeb_SearchMacmini {
     @Test
     public void testMethod() {
         WebDriver driver = new ChromeDriver();

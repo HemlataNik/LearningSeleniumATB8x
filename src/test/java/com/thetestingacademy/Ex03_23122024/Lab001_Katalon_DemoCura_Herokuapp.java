@@ -8,7 +8,7 @@ import org.testng.Assert;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Lab001_com_Basics {
+public class Lab001_Katalon_DemoCura_Herokuapp {
     public static void main(String args[]) throws Exception {
 
         WebDriver driver = new ChromeDriver();
