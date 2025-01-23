@@ -23,7 +23,10 @@ public class Lab001_FileuploadUsingActions {
         driver.get("https://awesomeqa.com/selenium/upload.html");
         WebElement uploadFileInput = driver.findElement(By.id("fileToUpload"));
         Thread.sleep(3000);
-        uploadFileInput.sendKeys("E:\\testdata.txt");
+        String working_dir = System.getProperty("user.dir");
+        System.out.println(working_dir);
+
+        uploadFileInput.sendKeys("C:\\Users\\HP\\IdeaProjects\\LearningSeleniumATB8x\\src\\test\\java\\com\\thetestingacademy\\Ex11_23012025_ActionsAdvance\\testdata.txt");
         driver.findElement(By.name("submit")).click();
     }
 
