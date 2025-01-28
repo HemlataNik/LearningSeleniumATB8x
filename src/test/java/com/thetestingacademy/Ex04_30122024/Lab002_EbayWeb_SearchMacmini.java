@@ -9,18 +9,19 @@ import java.util.List;
 public class Lab002_EbayWeb_SearchMacmini {
     @Test
     public void testMethod() {
-        WebDriver driver = new ChromeDriver();
+        ChromeDriver driver = new ChromeDriver();
         driver.get("https://www.ebay.com/");
+        driver.manage().window().maximize();
 
         WebElement searchBox = driver.findElement(By.xpath("//input[@id='gh-ac']"));
         searchBox.sendKeys("macmini");
 
-        WebElement searchButton = driver.findElement(By.xpath("//input[@id='gh-btn']"));
+        WebElement searchButton = driver.findElement(By.xpath("//button[@id='gh-search-btn']"));
         searchButton.click();
 
         List<WebElement> searchTitles = driver.findElements(By.xpath("//div[@class='s-item__title']"));
         List<WebElement> searchTitlePrices = driver.findElements(By.xpath("//span[@class='s-item__price']"));
-
+//Math. min() method returns the number with the lowest value
         int size = Math.min(searchTitles.size(), searchTitlePrices.size());
         System.out.println(size);
         for (int i = 0; i < size; i++) {

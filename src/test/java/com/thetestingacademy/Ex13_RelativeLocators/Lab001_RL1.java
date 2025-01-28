@@ -1,6 +1,7 @@
 package com.thetestingacademy.Ex13_RelativeLocators;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.locators.RelativeLocator;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import io.qameta.allure.Description;
@@ -26,8 +27,8 @@ public class Lab001_RL1 {
 
         WebElement span_element = driver.findElement(By.xpath("//span[normalize-space()='Years of Experience']"));
 
-        driver.findElement(with(By.id("exp-2")).toRightOf(span_element)).click();
-
+       // driver.findElement(with(By.id("exp-2")).toRightOf(span_element)).click();
+driver.findElement(RelativeLocator.with(By.id("exp-2")).toRightOf(span_element)).click();
     }
     @AfterTest
     public void closeBrowser() {

@@ -20,7 +20,7 @@ public class Lab001_URLVerify {
         int COUNT = URL.size();
         System.out.println(COUNT);
         for (int i = 0; i <= COUNT; i++) {
-            String URL_title = URL.get(i).getTagName();
+            String URL_title = URL.get(i).getAccessibleName();
             System.out.println(URL_title);
         }
     }
