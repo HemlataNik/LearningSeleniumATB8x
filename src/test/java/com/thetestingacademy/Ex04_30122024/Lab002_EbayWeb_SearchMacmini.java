@@ -30,6 +30,6 @@ public class Lab002_EbayWeb_SearchMacmini {
 
             System.out.println("Title : " + searchTitles.get(i).getText() + " || Price : " + searchTitlePrices.get(i).getText());
         }
-        driver.quit();
+        //driver.quit();
     }
 }
