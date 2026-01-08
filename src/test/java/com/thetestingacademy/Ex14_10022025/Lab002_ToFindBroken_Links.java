@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -11,7 +12,10 @@ import java.util.List;
 
 public class Lab002_ToFindBroken_Links {
     public static void main(String args[]) {
-        WebDriver driver = new ChromeDriver();
+
+        ChromeOptions option = new ChromeOptions();
+        option.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(option);
         driver.manage().window().maximize();
 
         driver.get("https://demoqa.com/links");
